@@ -1,0 +1,156 @@
+\documentclass[8pt,a4paper]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[noadjust]{cite}
+%\usepackage{program}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{subfloat}
+\usepackage{framed}
+\usepackage{color}
+%\usepackage{CJKutf8}
+\usepackage{geometry}
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}%---------------------------使用xeCJK宏包
+\leftmargin=0.25in
+\oddsidemargin=0.15in
+\textwidth=6.0in
+\topmargin=-0.8in
+\textheight=19in
+
+\raggedright
+\pagenumbering{arabic}
+\geometry{top=0.5cm}
+\geometry{bottom=0.5cm}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\large \scshape {#1}}\\ %\smallskip
+			{#2}\\ %\smallskip
+			{#3}\\ %\smallskip
+			{#4}%\smallskip
+		\end{center}
+	\end{changemargin}
+}
+%\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+%\newcommand{\contact}[3]{
+%\vspace*{-8pt}
+%\begin{center}
+%{\LARGE \scshape {#1}}\\
+%#2 \lineover
+%#3
+%\end{center}
+%\vspace*{-8pt}
+%}
+
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\
+	#4\\
+}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%\begin{CJK}{UTF8}{gbsn}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+%\contact{张猛}{Email:zhangmeng0778@gmail.com}{Tel:14714307955}
+\begin{minipage}[t]{0.5\textwidth}
+\textbf{张猛} \\
+%\hfill 资深工程师-算法, T7 \\
+%\hfill 商业推荐研发部 \\
+\hfill 专业领域: 推荐、广告、机器学习\\
+\end{minipage}
+%
+%\begin{rightflush}
+\begin{minipage}[t]{0.48\textwidth}
+%\textsc{Tel:} (86)18612569647\\
+\textsc{Email:} zhangmeng0778@qq.com \\
+%\textsc{Page:} \href{https://sheldonzhang.github.io/zhangmeng.github.io/}{技术},\href{https://sheldonzhang.github.io/zhangmeng.github.io/}{思考} \\
+%\textsc{Page:} \url{https://sheldonzhang.github.io/zhangmeng.github.io/},\href{https://sheldonzhang.github.io/zhangmeng.github.io/}{思考} \\
+%\textsc{Web:} http://appsrv.cse.cuhk.edu.hk/$\sim$mzhang \\ %\textasciitilde
+%\textsc{LinkedIn:} https://www.linkedin.com/in/zhangmeng0778 \\
+\end{minipage}
+\header{关于自己}
+
+\begin{body}
+	\vspace{14pt}
+	百度, 北京\\
+	\begin{itemize}
+		\item \textbf{推荐广告-算法负责人}  \hfill \emph{9.2016-至今} \\
+		\item 百度地图-实时公交研发  \hfill \emph{2.2015-9.2016} \\	
+	\end{itemize}
+	硕士, 香港中文大学, 香港\\
+	\begin{itemize}    
+    		\item \textbf{全奖}, 计算机科学工程系 \hfill \emph{8.2012-9.2014} \\
+		\item 研究方向: 流体模拟，计算机图形学\\
+	\end{itemize}
+	本科, 厦门大学, 福建\\
+	\begin{itemize}
+		\item 计算机科学与技术系  \hfill \emph{9.2008-7.2012} \\
+	\end{itemize}
+\end{body}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{介绍}
+
+\begin{body}
+	\vspace{14pt}
+	人生目标: 活着就是改变世界、奉献给世界\\
+\end{body}
+\header{笔记}
+\begin{body}
+	\vspace{14pt}
+	日常技术笔记: \url{https://sheldonzhang.github.io/tech} \\
+	人生思考: \url{https://sheldonzhang.github.io/thinking} 
+\end{body}
+\end{document} 
